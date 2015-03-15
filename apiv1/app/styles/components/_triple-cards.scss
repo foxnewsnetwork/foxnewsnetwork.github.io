@@ -1,0 +1,18 @@
+.triple-cards {
+  width: 300%;
+  height: 100%;
+  &.is-mid {
+    @include translateX(-33.333%);
+  }
+  &.is-left {
+    @include translateX(0); 
+  }
+  &.is-right {
+    @include translateX(-66.666%);  
+  }
+  @include display-flex;
+  @include flex-direction(row);
+  @include transition-property(all);
+  @include transition-timing-function(ease-in);
+  @include transition-duration(300ms);
+}

@@ -1,0 +1,15 @@
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  background-color: #333;
+}
+body.ember-application {
+  background: {
+    image: image-url("city.jpg");
+    size: cover;
+    position: center top;
+    color: #111;
+  }
+}

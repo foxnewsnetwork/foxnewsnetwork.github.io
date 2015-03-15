@@ -1,0 +1,32 @@
+$material-red: #F44336;
+$material-purple: #9C27B0;
+$material-blue: #2196F3;
+$material-green: #4CAF50;
+$material-orange: #FF5722;
+
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;
+
+.highlight {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  color: #fff;
+  &:nth-of-type(5n+0) {
+    background-color: $material-red;
+  }
+  &:nth-of-type(5n+1) {
+    background-color: $material-purple;
+  }
+  &:nth-of-type(5n+2) {
+    background-color: $material-blue;
+  }
+  &:nth-of-type(5n+3) {
+    background-color: $material-green;
+  }
+  &:nth-of-type(5n+4) {
+    background-color: $material-orange;
+  }
+}

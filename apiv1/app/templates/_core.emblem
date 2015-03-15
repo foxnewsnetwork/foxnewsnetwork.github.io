@@ -1,0 +1,20 @@
+.col-lg-3.col-md-3.col-sm-6.col-xs-6
+  link-to "about"
+    figure
+      figcaption about me
+      img.thumbnail.icon.cyan-hover src="images/about.png"
+.col-lg-3.col-md-3.col-sm-6.col-xs-6
+  link-to "works"
+    figure
+      figcaption my works
+      img.thumbnail.icon.indigo-hover src="images/contracts.png"
+.col-lg-3.col-md-3.col-sm-6.col-xs-6
+  link-to "writings"
+    figure
+      figcaption blog
+      img.thumbnail.icon.red-hover src="images/pencil.png"
+.col-lg-3.col-md-3.col-sm-6.col-xs-6
+  link-to "contact"
+    figure
+      figcaption contact me
+      img.thumbnail.icon.teal-hover src="images/contact.png"

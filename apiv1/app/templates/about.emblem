@@ -1,0 +1,16 @@
+full-page id="about"
+  .container
+    .row
+      .col-lg-6.image-side
+      .col-lg-6.text-side
+        h3.section-title
+          span.fa.underline about me
+        p 
+          span.fa I am thomas chen and I design scaffold and deploy
+          span.fa.highlight web-based
+          span.fa software systems.
+        p
+          span.fa I build most of my projects using
+          span.fa.highlight Ruby on Rails
+          span.fa and
+          span.fa.highlight Emberjs.

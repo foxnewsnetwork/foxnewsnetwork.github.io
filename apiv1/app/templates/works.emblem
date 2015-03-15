@@ -1,0 +1,42 @@
+#works
+  .container-fluid
+    .row
+      .col-xs-12
+        .steel-modal
+          .modal-title
+            .btn-group.btn-group-lg
+              link-to "index" class="btn btn-default"
+                span.fa navigation
+              link-to "works" class="btn btn-primary"
+                span.fa portfolio
+              button.btn.btn-default
+                span.fa do nothing
+          .project-cards
+            .meta-data
+              span.fa 4 out of 256
+
+            .cards
+              .row
+                .col-xs-12.col-sm-12.col-md-4.col-lg-2
+                  .card
+                    h4.card-title some project
+                    .card-status active: never
+                    screenshot-icons src="images/Screenshot.png"
+                      img.tag-icon.ruby src="images/ruby.png"
+                  .short-description
+                    span.fa some sort of shitty project blah blah
+                .col-xs-12.col-sm-12.col-md-4.col-lg-2
+                  .card
+                    h4.card-title some project
+                    .card-status active: never
+                    screenshot-icons src="images/Screenshot.png"
+                      img.tag-icon.ruby src="images/ruby.png"
+                      img.tag-icon.haskell src="images/haskell.png"
+                  .short-description
+                    span.fa some sort of shitty project blah blah
+              .row
+                .col-xs-12.centered
+                  nav
+                    ul.pagination
+                      li: a 1
+                      li: a 2

@@ -1,0 +1,77 @@
+@import url(http://fonts.googleapis.com/css?family=Nunito:400,700);
+
+#index {
+  @include display-flex;
+  @include align-items(center);
+  @include justify-content(center);
+  @include flex-direction(column);
+  min-height: 500px;
+
+  &::before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+      
+  }
+
+  .modal-box::before {
+    font-family: 'Nunito', sans-serif;
+    content: "Chen Co";
+    font-weight: 700;
+    text-align: center;
+    display: block;
+    width: 100%;
+    font-size: 5.5rem;
+    position: absolute;
+    top: -6.5rem;
+    left: 0;
+    text-transform: uppercase;
+    color: #FFC107;
+    @include text-shadow(#BF360C -1.5px -2.5px 4px, #FFF8E1 1.5px 2.5px 4px);
+  }
+
+  .modal-title {
+    font-size: 1.75rem;
+    text-transform: capitalize;
+  }
+
+  .icon {
+    width: 100%;
+    @include box-shadow(#777 1px 1px 3px);
+    @include transition-property(background-color);
+    @include transition-timing-function(ease-in);
+    @include transition-duration(200ms);
+  }
+
+  .cyan-hover {
+    &:hover {
+      background-color: #B2EBF2;
+      @include box-shadow(#777 2px 2px 4px);
+    }
+  }
+  .indigo-hover {
+    &:hover {
+      background-color: #C5CAE9;
+      @include box-shadow(#777 2px 2px 4px);
+    }
+  }
+  .red-hover {
+    &:hover {
+      background-color: #FFCDD2;
+      @include box-shadow(#777 2px 2px 4px);
+    }
+  }
+  .teal-hover {
+    &:hover {
+      background-color: #B2DFDB;
+      @include box-shadow(#777 2px 2px 4px);
+    }
+  }
+
+  figcaption {
+    text-transform: capitalize;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+  }
+}

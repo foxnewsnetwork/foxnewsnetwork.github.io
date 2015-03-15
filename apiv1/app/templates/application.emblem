@@ -1,0 +1,28 @@
+#compass-nav
+  .top
+    link-to "writings" class="smart"
+      i.fa.fa-circle
+  .mid
+    .left
+      link-to "about" class="smart"
+        i.fa.fa-circle
+    .center
+      link-to "index" class="smart"
+        i.fa.fa-circle
+    .right
+      link-to "contact" class="smart"
+        i.fa.fa-circle
+  .bot
+    link-to "works" class="smart"
+      i.fa.fa-circle
+#border-top-nav
+  == outlet "top-nav"
+#border-left-nav
+  == outlet "left-nav"
+#border-right-nav
+  == outlet "right-nav"
+#border-bot-nav
+  == outlet "bot-nav"
+#application
+  == liquid-outlet
+== outlet "footer"
