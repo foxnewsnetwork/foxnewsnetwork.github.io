@@ -1,4 +1,10 @@
-figure
-  img src=src
-.content
-  == yield
+a.card target="blank" href=card.outboundLink
+  h4.card-title= card.name
+  .card-status
+    span.colon active
+    span.prespace.bold= card.lastActive
+  screenshot-icons src=card.screenshotPic
+    each pic in card.languagePics
+      img.tag-icon src=pic.src class=pic.className
+.short-description
+  span.fa= card.description

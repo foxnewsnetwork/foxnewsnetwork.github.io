@@ -10,7 +10,7 @@
     text-align: center;
     border-bottom: 25px solid #286090;
   }
-  .btn-group {
+  .main-btn-group {
     padding-bottom: 0px;
     margin-top: 15px;
     text-transform: uppercase;
@@ -31,46 +31,9 @@
     @include box-shadow(#bbb 0 -2px 5px 1px inset);
     padding: 5px 30px;
   }
-  .card {
-    @include box-shadow(#bbb 0 0px 4px 2px inset, #888 3px 3px 1px 1px);
-    @include transition-property(background-color);
-    @include transition-timing-function(ease-in);
-    @include transition-duration(300ms);
-    @include border-radius(5px);
-    border: 1px solid #ccc;
-    padding: 5px;
-    padding-bottom: 10px;
-    background-color: #f2f2f2;
-    &:hover {
-      background-color: #fff;
-      @include box-shadow(#666 3px 3px 3px 3px);
-    }
-  }
-  .card-title {
-    text-align: center;
-    font-size: 1.75rem;
-    text-transform: capitalize;
-    color: #2979FF;
-    font-weight: bolder;
-  }
-  .card-status {
-    @include box-shadow(#FFE0B2 0 2px 3px 1px inset, #F57C00 0 -2px 3px 1px inset);
-    background-color: #FF9800;
-    
-    padding-top: 5px;
-    padding-bottom: 5px;
-    color: #fff;
-    text-align: center;
-    text-transform: uppercase;
-  }
-  .screenshot-icons {
-    margin-top: 10px;
-    
-  }
-  .short-description {
-    padding: 10px 15px;
-  }
+  
   .centered {
-    text-align: center;
+    @include display-flex;
+    @include justify-content(center);
   }
 }

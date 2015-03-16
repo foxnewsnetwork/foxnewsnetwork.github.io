@@ -24,6 +24,7 @@ var app = new EmberApp({
 app.import('bower_components/bootstrap/dist/css/bootstrap.css');
 app.import('bower_components/bootstrap/dist/css/bootstrap.css.map', { destDir: "assets" });
 app.import('bower_components/jquery/dist/jquery.js');
+app.import('bower_components/jquery-timeago/jquery.timeago.js');
 app.import("bower_components/lodash/lodash.min.js",{
   exports: {
     "lodash": ["_"]

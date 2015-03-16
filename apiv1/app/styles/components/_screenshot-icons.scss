@@ -1,6 +1,6 @@
 .screenshot-icons {
   @media (max-width: $screen-md-min) {
-    
+    height: 150px;    
   }
   @media (min-width: $screen-md-min) and (max-width: $screen-lg-min) {
     height: 300px;
@@ -17,6 +17,13 @@
   @include align-content(flex-end);
   @include flex-wrap(wrap);
   @include align-items(flex-end);
+  .fallback-explanation {
+    padding: 15px;
+    font-size: 1.75rem;
+    color: #212121;
+    @include text-shadow(#F5F5F5 0 0 2px 3px);
+    background-color: fade-out(#FFEB3B, 0.4);
+  }
   .tag-icon {
     width: 50px;
     height: 50px;
@@ -45,6 +52,9 @@
   }
   .sass {
     @include border-iconify(#E91E63);
+  }
+  .css {
+    @include border-iconify(#006064); 
   }
   .haskell {
     @include border-iconify(#388E3C);

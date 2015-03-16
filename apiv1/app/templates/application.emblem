@@ -1,7 +1,4 @@
 #compass-nav
-  .top
-    link-to "writings" class="smart"
-      i.fa.fa-circle
   .mid
     .left
       link-to "about" class="smart"

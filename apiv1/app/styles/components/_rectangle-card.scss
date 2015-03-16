@@ -1,57 +1,43 @@
 .rectangle-card {
-  @include border-radius(15px);
-  @include transition-property(background-color);
-  @include transition-timing-function(ease-in);
-  @include transition-duration(200ms);
-  @include display-flex;
-  @include flex-direction(column);
-  @include justify-content(space-between);
-  
-  padding: 15px;
-  cursor: pointer;
-  figure {
-    margin-top: 15px;
-  }
-  img {
-    width: 100%;
-  }
-  &:nth-of-type(5n+0) {
-    border: 4px solid $material-red;
-    background-color: lighten($material-red, 50%);
-  }
-  &:nth-of-type(5n+1) {
-    border: 4px solid $material-purple;
-    background-color: lighten($material-purple, 50%);
-  }
-  &:nth-of-type(5n+2) {
-    border: 4px solid $material-blue;
-    background-color: lighten($material-blue, 50%);
-  }
-  &:nth-of-type(5n+3) {
-    border: 4px solid $material-green;
-    background-color: lighten($material-green, 50%);
-  }
-  &:nth-of-type(5n+4) {
-    border: 4px solid $material-orange;
-    background-color: lighten($material-orange, 50%);
-  }
-  &:hover {
-    @include box-shadow(#222 2px 2.5px 5px);
-    background-color: #fff;
+  .card {
+    cursor: pointer;
+    @include box-shadow(#bbb 0 0px 4px 2px inset, #888 3px 3px 1px 1px);
+    @include transition-property(background-color);
+    @include transition-timing-function(ease-in);
+    @include transition-duration(300ms);
+    @include border-radius(5px);
+    border: 1px solid #ccc;
+    padding: 5px;
+    padding-bottom: 10px;
+    background-color: #f2f2f2;
+    display: block;
+    &:hover {
+      background-color: #fff;
+      @include box-shadow(#666 3px 3px 3px 3px);
+    }
   }
   .card-title {
-    font-size: 2rem;
-    padding-bottom: 15px;
-    margin-bottom: 15px;
-    border-bottom: 1px solid #666;
+    text-align: center;
+    font-size: 1.75rem;
     text-transform: capitalize;
-    color: #222;
+    color: #2979FF;
+    font-weight: bolder;
   }
-  .card-description {
-    color: #333;
-    margin-bottom: 15px;
+  .card-status {
+    @include box-shadow(#FFE0B2 0 2px 3px 1px inset, #F57C00 0 -2px 3px 1px inset);
+    background-color: #FF9800;
+    
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
   }
-  .tags {
-    font-size: 1rem;
+  .screenshot-icons {
+    margin-top: 10px;
+    
   }
+  .short-description {
+    padding: 10px 15px;
+  }  
 }

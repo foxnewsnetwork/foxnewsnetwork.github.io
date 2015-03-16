@@ -8,5 +8,10 @@ ContactRoute = Ember.Route.extend
       into: "application"
       outlet: "left-nav"
 
+  actions:
+    willTransition: ->
+      $("body.ember-application").removeClass "contact-parallax"
+    didTransition: ->
+      $("body.ember-application").addClass "contact-parallax"
 
 `export default ContactRoute`
