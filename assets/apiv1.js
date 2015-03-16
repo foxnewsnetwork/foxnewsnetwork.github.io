@@ -4651,7 +4651,7 @@ catch(err) {
 if (runningTests) {
   require("apiv1/tests/test-helper");
 } else {
-  require("apiv1/app")["default"].create({"name":"apiv1","version":"0.0.0.9e70676e"});
+  require("apiv1/app")["default"].create({"name":"apiv1","version":"0.0.0.1954b16d"});
 }
 
 /* jshint ignore:end */
