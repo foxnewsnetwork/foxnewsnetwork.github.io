@@ -1,0 +1,62 @@
+.screenshot-icons {
+  @media (max-width: $screen-md-min) {
+    height: 150px;    
+  }
+  @media (min-width: $screen-md-min) and (max-width: $screen-lg-min) {
+    height: 300px;
+  }
+  @media (min-width: $screen-lg-min) {
+    height: 300px;
+  }
+  background: {
+    size: contain;
+    position: center top;
+  }
+  @include display-flex;
+  @include flex-direction(flex-end);
+  @include align-content(flex-end);
+  @include flex-wrap(wrap);
+  @include align-items(flex-end);
+  .fallback-explanation {
+    padding: 15px;
+    font-size: 1.75rem;
+    color: #212121;
+    @include text-shadow(#F5F5F5 0 0 2px 3px);
+    background-color: fade-out(#FFEB3B, 0.4);
+  }
+  .tag-icon {
+    width: 50px;
+    height: 50px;
+    @include border-radius(5px);
+    background-color: #fff;
+    margin-top: 5px;
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+  }
+  @mixin border-iconify($color) { 
+    border: 5px solid $color;
+    background-color: lighten($color, 50%);
+  }
+  .ruby {
+    @include border-iconify(#B71C1C);
+  }
+  .javascript {
+    @include border-iconify(#FDD835);
+  }
+  .coffeescript {
+    @include border-iconify(#1A237E);
+  }
+  .livescript {
+    @include border-iconify(#1E88E5);
+  }
+  .sass {
+    @include border-iconify(#E91E63);
+  }
+  .css {
+    @include border-iconify(#006064); 
+  }
+  .haskell {
+    @include border-iconify(#388E3C);
+  }
+}

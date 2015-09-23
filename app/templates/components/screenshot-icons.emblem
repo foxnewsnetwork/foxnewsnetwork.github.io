@@ -1,0 +1,4 @@
+img.hidden.image src=src
+if mustUseFallbackPic
+  .fallback-explanation.fa missing project cover art, it can't be helped.
+== yield

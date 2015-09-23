@@ -1,0 +1,12 @@
+site-nav navClass="brown darken-4"
+full-page id="contact"
+  .container
+    .row
+      .col.l6.m12.s12.text-side
+        h3.section-title
+          span.fa.underline contact me
+        dl
+          dt email
+          dd foxnewsnetwork@gmail.com
+          dt github
+          dd github.com/foxnewsnetwork

@@ -3,6 +3,17 @@
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
 
+```sh
+ember install ember-cli-coffeescript &&
+ember install liquid-fire &&
+ember install ember-cli-emblem &&
+ember install ember-cli-sass &&
+ember install ember-cli-font-awesome &&
+ember install ember-cli-materialize &&
+ember install ember-moment &&
+ember install active-model-adapter &&
+npm install --save-dev compass-mixins
+```
 ## Prerequisites
 
 You will need the following things properly installed on your computer.

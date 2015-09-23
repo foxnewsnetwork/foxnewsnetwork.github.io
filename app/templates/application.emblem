@@ -1,0 +1,5 @@
+#application
+  == liquid-outlet
+
+#footer
+  == outlet "footer"

@@ -1,0 +1,28 @@
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  background-color: #333;
+}
+body.ember-application {
+  @include transition-property(background-position);
+  @include transition-timing-function(ease-out);
+  @include transition-duration(300ms);
+  background: {
+    image: images-url("city.jpg");
+    size: 115% 115%;
+    position: 50% 0;
+    color: #111;
+    repeat: repeat-x;
+  }
+  &.about-parallax {
+    background-position: 35% 0;
+  }
+  &.contact-parallax {
+    background-position: 65% 0;
+  }
+  &.works-parallax {
+    background-position: 50% 15%;
+  }
+}

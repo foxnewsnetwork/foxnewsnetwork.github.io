@@ -1,0 +1,26 @@
+{{#md-card title=model.name
+  titleClass="orange-text"
+  image=cardPic}}
+
+  {{#component cardPresentationComponent}}
+    <div class="short-description">
+      {{model.description}}
+    </div>
+    <div class="card-status">
+      <span class="colon">active</span>
+      <span class="prespace bold">{{model.lastActive}}</span>
+    </div>
+  {{/component}}
+
+  {{#md-card-action}}
+    <a href={{model.sampleLink}} target="blank">
+      demo site
+    </a>
+    <a href={{model.outboundLink}} target="blank">
+      source code
+    </a>
+  {{/md-card-action}}
+
+{{/md-card}}
+
+<img class="hidden image" src={{model.screenshotPic}}>
