@@ -1,9 +1,0 @@
-full-page id="index"
-  .container
-    .row
-      .col.s12
-        h4.site-title Chen Co.
-    material-tiles-collection tiles=model as |tile|
-      material-tile-link tile.target background=tile.background
-        .tile-title= tile.title
-        .tile-subtitle= tile.description
