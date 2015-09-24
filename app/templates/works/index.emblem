@@ -1,0 +1,25 @@
+.row
+  each model as |showcase|
+    .col.s12.m6.l6
+      md-card title=showcase.title titleClass="amber-text darken-4" activator=true image=showcase.background
+
+        md-card-content
+          span.fa= showcase.summary
+
+        md-card-reveal
+          .description
+            span.fa= showcase.description
+          .status
+            span.fa.bold.colon status
+            span.fa= showcase.status
+
+        md-card-action
+          a href=showcase.siteLink
+            span.fa Visit site
+.row
+  .col.s12
+    .align-center
+      a.waves-effect.waves-light.btn-large.deep-orange.darken-3.white-text href="https://github.com/foxnewsnetwork" target="blank"
+        span More on Github
+        i.fa.fa-external-link
+    h1

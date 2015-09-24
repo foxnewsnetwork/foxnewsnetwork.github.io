@@ -10,8 +10,6 @@ RectangleCardComponent = Ember.Component.extend
   didInsertElement: ->
     @$('img.hidden').one 'load', =>
       @set "cardPic", @get("model.screenshotPic")
-    @$('img.hidden').one 'error', =>
-      @set "cardPic", @get("fallbackPic")
   
 
 `export default RectangleCardComponent`

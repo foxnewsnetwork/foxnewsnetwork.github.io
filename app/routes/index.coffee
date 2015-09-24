@@ -7,7 +7,7 @@ About =
   description: "programmer, designer, systems architect"
 Portfolio =
   background: "assets/images/portfolio.jpg"
-  target: "works"
+  target: "works.index"
   title: "my works"
   description: "running portfolio from my github"
 Contact =

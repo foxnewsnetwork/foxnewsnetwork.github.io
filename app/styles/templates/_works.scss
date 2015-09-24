@@ -1,11 +1,17 @@
 #works {
   background: {
-    color: #333;
+    color: color("grey", "darken-2");
   }
   margin-top: 300px;
   .anti-margin {
-    margin-top: -50px;
+    margin-top: -54px;
     color: #fff;
     font-weight: bold;
+    .active {
+      background-color: color("grey", "darken-2");
+    }
+  }
+  .btn-large {
+    background-color: color("grey", "darken-4");
   }
 }

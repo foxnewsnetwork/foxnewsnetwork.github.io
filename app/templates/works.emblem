@@ -3,7 +3,11 @@ site-nav navClass="blue darken-4"
   .container
     .row
       .col.s12
-        h4.anti-margin.align-right Running Portfolio
-    .row
-      each model as |repo|
-        rectangle-card model=repo
+        .anti-margin.align-right
+          link-to "works.index" class="waves-effect btn-large"
+            span.fa showcase
+          link-to "works.running-portfolio" class="waves-effect btn-large"
+            span.fa portfolio
+    == liquid-outlet
+    
+site-footer

@@ -1,0 +1,10 @@
+.row
+  each model as |repo|
+    rectangle-card model=repo
+.row
+  .col.s12
+    .align-center
+      a.waves-effect.waves-light.btn-large.deep-orange.darken-3.white-text href="https://github.com/foxnewsnetwork" target="blank"
+        span More on Github
+        i.fa.fa-external-link
+    h1

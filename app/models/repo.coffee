@@ -1,3 +1,4 @@
+`import Ember from 'ember'`
 `import DS from 'ember-data'`
 `import moment from 'moment'`
 
@@ -8,10 +9,10 @@ Repo = DS.Model.extend
   htmlUrl: DS.attr "string"
   homepage: DS.attr "string"
   updatedAt: DS.attr "date"
-  language: DS.attr "string"
+  language: DS.attr "string", defaultValue: "unknown"
 
   languagePic: Ember.computed "language", ->
-    l = Ember.String.decamelize @get "language"
+    l = Ember.String.decamelize(@get("language") or "unknown")
     "assets/images/#{l}.png"
 
   screenshotPic: Ember.computed "htmlUrl", ->

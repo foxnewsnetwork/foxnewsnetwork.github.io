@@ -1,0 +1,32 @@
+<footer class="page-footer light-black white-text">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">Chenco Web Service</h5>
+        <p class="grey-text text-lighten-4">Thomas Chen's portfolio</p>
+      </div>
+      <div class="col l4 offset-l2 s12">
+        <h5 class="white-text">Links</h5>
+        <ul>
+          {{#link-to "about" class="grey-text text-lighten-3" tagName="li"}}
+            {{link-to 'About' 'about'}}
+          {{/link-to}}
+          {{#link-to "works" class="grey-text text-lighten-3" tagName="li"}}
+            {{link-to 'Portfolio' 'works'}}
+          {{/link-to}}
+          {{#link-to "contact" class="grey-text text-lighten-3" tagName="li"}}
+            {{link-to 'Contact' 'contact'}}
+          {{/link-to}}
+          {{#link-to "services" class="grey-text text-lighten-3" tagName="li"}}
+            {{link-to 'Quote' 'services'}}
+          {{/link-to}}
+        </ul>
+      </div>
+    </div>
+  </div>
+  {{#md-copyright text='Copyright Text'
+      startYear=2011
+      class='black lighten-1 white-text'}}
+      <a class="grey-text text-lighten-4 right" href="https://github.com/foxnewsnetwork">Github portfolio</a>
+  {{/md-copyright}}
+</footer>

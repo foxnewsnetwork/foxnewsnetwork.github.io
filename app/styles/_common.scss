@@ -104,3 +104,9 @@ $screen-lg-min: 1200px;
 .transparent {
   @include opacity(0);
 }
+
+.light-black {
+  background: {
+    color: #111 !important;
+  }
+}
