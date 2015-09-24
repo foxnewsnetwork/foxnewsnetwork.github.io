@@ -3,26 +3,26 @@
 About =
   background: "assets/images/about.png"
   target: "about"
-  title: "about me"
-  description: "programmer, designer, systems architect"
-Portfolio =
+  title: "About me"
+  description: "Programmer, designer, systems architect"
+Showcase =
   background: "assets/images/portfolio.jpg"
   target: "works.index"
-  title: "my works"
-  description: "running portfolio from my github"
+  title: "Showcase"
+  description: "Showcase of my current active projects"
+Portfolio =
+  background: "assets/images/portfolio-2.jpg"
+  target: "works.running-portfolio"
+  title: "Portfolio"
+  description: "My running portfolio of day-to-day work"
 Contact =
   background: "assets/images/contact.jpg"
   target: "contact"
   title: "contact"
-  description: "hire me for something!"
-Service =
-  background: "assets/images/quote.png"
-  target: "services"
-  title: "service quote"
-  description: "my price quote for common web-related jobs"
+  description: "Hire me for something!"
 
 IndexRoute = Ember.Route.extend
   model: ->
-    [About, Portfolio, Contact, Service]
+    [About, Showcase, Portfolio, Contact]
 
 `export default IndexRoute`
