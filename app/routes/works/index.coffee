@@ -41,20 +41,20 @@ Fox =
   siteLink: "https://hex.pm/packages/fox"
   background: "assets/images/fox.png"
 
-Lacekei =
-  title: "Lacekei"
-  summary: "Free to run e-Commerce trading platform on EmberJS"
+Harbor =
+  title: "Harbor Green Group"
+  summary: "Marketing site adhering to Google's principles of material design"
   description: """
-  21st century e-Commerce, especially niche commerce, is usually plagued by run time server costs.
-  Lacekei attempts to resolve this buy off-loading all state logic onto the browser front end with javascript,
-  that way, back-end servers can be run completely stateless (and therefore qualify for free-tier plans).
+  Websites are to corporations what pants are to employees. While a good business needs plenty of other traits,
+  nevertheless, no one will do business with someone who isn't wearing pants. A good website, then should follow
+  strong design principles and adhere to the brand and themes embodied by the company statement and CEO vision.
   """
-  status: "under construction"
-  siteLink: "https://lacekei.github.io"
-  background: "assets/images/under_construction.jpg"
+  status: "ok"
+  siteLink: "https://www.harborgreengroup.com"
+  background: "assets/images/harbor.jpg"
 
 ShowcaseRoute = Ember.Route.extend
   model: ->
-    Ember.A [Pisources, MLRecycle, Fox, Lacekei]
+    Ember.A [Harbor, Pisources, MLRecycle, Fox]
 
 `export default ShowcaseRoute`
