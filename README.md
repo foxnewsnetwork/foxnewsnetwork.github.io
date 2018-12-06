@@ -2,6 +2,14 @@
 
 Here is my (mostly static) site that I plan to use for everything from aggregating my working portfolio to blogging
 
+## WIP
+
+Currently, this is a WIP
+
+- [ ] setup webpack build
+- [ ] setup remark with webpack
+- [ ] setup github pages deploy
+
 
 ## Run Project
 
@@ -30,3 +38,4 @@ This will replace the development artifact `build/Index.js` for an optimized ver
 ## References
 
 - [remark plugins](https://github.com/remarkjs/remark/blob/master/doc/plugins.md)
+- [webpack plugins](https://github.com/jantimon/html-webpack-plugin)

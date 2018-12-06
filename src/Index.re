@@ -1,3 +1,4 @@
-ReactDOMRe.renderToElementWithId(<Component1 message="Hello!" />, "index1");
+[@bs.module]
+external blog : string = "./blogs/2018-12-5-hello-world.md";
 
-ReactDOMRe.renderToElementWithId(<Component2 greeting="Hello!" />, "index2");
+ReactDOMRe.renderToElementWithId(<Markdown content={blog} />, "main");

@@ -17,7 +17,14 @@
   "dependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "reason-react": ">=0.4.0",
+    "reason-react": ">=0.4.0"
+  },
+  "devDependencies": {
+    "bs-platform": "4.0.5",
+    "favicons-webpack-plugin": "^0.0.9",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "raw-loader": "^0.5.1",
     "remark": "^10.0.1",
     "remark-highlight.js": "^5.0.0",
     "remark-html": "^9.0.0",
@@ -26,11 +33,9 @@
     "remark-mermaid": "^0.2.0",
     "remark-metadata": "^0.2.1",
     "remark-preset-lint-markdown-style-guide": "^2.1.2",
-    "remark-slug": "^5.1.1"
-  },
-  "devDependencies": {
-    "bs-platform": "4.0.5",
-    "webpack": "^4.0.1",
+    "remark-react": "^5.0.0",
+    "remark-slug": "^5.1.1",
+    "webpack": "4.19.1",
     "webpack-cli": "^2.0.10"
   }
 }
