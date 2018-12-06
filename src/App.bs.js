@@ -5,7 +5,6 @@ var AppCss = require("./App.css");
 var ReactDOMRe = require("reason-react/src/ReactDOMRe.js");
 var ReasonReact = require("reason-react/src/ReasonReact.js");
 var Markdown$ReactTemplate = require("./Markdown.bs.js");
-var RainbowCss = require("highlight.js/styles/rainbow.css");
 var HelloWorldMd = require("./blogs/2018-12-5-hello-world.md");
 
 ReactDOMRe.renderToElementWithId(ReasonReact.element(undefined, undefined, Markdown$ReactTemplate.make(HelloWorldMd, /* array */[])), "main");

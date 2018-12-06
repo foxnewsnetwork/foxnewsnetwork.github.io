@@ -1,31 +1,46 @@
-type t;
+module RemarkEngine = {
+  type t;
 
-type plugin;
+  [@bs.deriving abstract]
+  type syncResult = pri {
+    contents: ReasonReact.reactElement
+  };
 
-[@bs.module]
-external remark : unit => t = "remark";
+  [@bs.module]
+  external _remark : unit => t = "remark";
 
-[@bs.send]
-external use_ : t => plugin => t = "use";
+  let remark = _remark();
 
-[@bs.deriving abstract]
-type syncResult = pri {
-  contents: ReasonReact.reactElement
+  [@bs.send]
+  external processSync : t => string => syncResult = "processSync";
 };
 
-[@bs.send]
-external processSync : t => string => syncResult = "processSync";
+module RemarkPlugin = {
+  type t;
 
-[@bs.module]
-external parsePlugin : plugin = "remark-parse";
+  [@bs.send]
+  external use_ : RemarkEngine.t => t => RemarkEngine.t = "use";
 
-module RemarkCodeMirror = {
+  [@bs.send]
+  external useWithOpts : RemarkEngine.t => t => 'opts => RemarkEngine.t = "use";
+};
+
+module RemarkParsePlugin = {
+  [@bs.module]
+  external plugin : RemarkPlugin.t = "remark-parse";
+};
+
+
+module RemarkCodeMirrorOptions = {
+  /* https://github.com/craftzdog/remark-react-codemirror */
   [@bs.module]
   external _meta : unit = "codemirror/mode/meta";
   let _ = _meta;
+
   [@bs.module]
   external _runmode : unit = "codemirror/addon/runmode/runmode";
   let _ = _runmode;
+
   [@bs.module]
   external _javascript : unit = "codemirror/mode/javascript/javascript";
   let _ = _javascript;
@@ -33,29 +48,53 @@ module RemarkCodeMirror = {
   type t;
 
   [@bs.module]
-  external engine : t = "codemirror";
+  external codemirror : t = "codemirror";
+
+  [@bs.deriving abstract]
+  type lightopts = {
+    theme: string
+  };
+
+  type highlighter;
 
   [@bs.module]
-  external plugin : plugin = "remark-react-codemirror";
+  external plugin : t => lightopts => highlighter = "remark-react-codemirror";
+
+  [@bs.module]
+  external _style : unit = "codemirror/theme/monokai.css";
+  let _ = _style;
+
+  [@bs.deriving abstract]
+  type remarkReactComponents = {
+    code: highlighter
+  };
+
+  [@bs.deriving abstract]
+  type pluginOpts = {
+    sanitize: HastUtilsSanitize.schema,
+    [@bs.as "remarkReactComponents"]
+    remarkReactComponents_: remarkReactComponents,
+  };
+  let opts = pluginOpts(
+    ~sanitize=HastUtilsSanitize.sanitizeGhSchema,
+    ~remarkReactComponents_=remarkReactComponents(
+      ~code=plugin(codemirror, lightopts(
+          ~theme="monokai"
+        )
+      )
+    )
+  );
 };
 
-[@bs.module]
-external highlightStyle : unit = "codemirror/theme/monokai.css";
-let _ = highlightStyle;
+module RemarkReactPlugin = {
+  [@bs.module]
+  external plugin : RemarkPlugin.t = "remark-react";
+};
 
-/* the html plugin seems to conflict with the react-plugin */
-/* [@bs.module]
-external htmlPlugin : plugin = "remark-html"; */
-
-[@bs.module]
-external reactPlugin : plugin = "remark-react";
-
-let _renderer = remark()
-  -> use_(parsePlugin)
-  -> use_(highlightPlugin)
-  -> use_(reactPlugin)
-  /* -> use_(htmlPlugin) */
+let _renderer = RemarkEngine.remark
+    -> RemarkPlugin.use_(RemarkParsePlugin.plugin)
+    -> RemarkPlugin.useWithOpts(RemarkReactPlugin.plugin, RemarkCodeMirrorOptions.opts)
 
 let render: string => ReasonReact.reactElement = (markdown) => _renderer
-  -> processSync(markdown)
-  -> contentsGet
+  -> RemarkEngine.processSync(markdown)
+  -> RemarkEngine.contentsGet

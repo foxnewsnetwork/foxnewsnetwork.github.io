@@ -2,16 +2,48 @@
 'use strict';
 
 var Remark = require("remark");
+var Codemirror = require("codemirror");
 var RemarkParse = require("remark-parse");
 var RemarkReact = require("remark-react");
-var RemarkHighlightJs = require("remark-highlight.js");
+var Meta = require("codemirror/mode/meta");
+var RemarkReactCodemirror = require("remark-react-codemirror");
+var MonokaiCss = require("codemirror/theme/monokai.css");
+var HastUtilsSanitize$ReactTemplate = require("./HastUtilsSanitize.bs.js");
+var Runmode = require("codemirror/addon/runmode/runmode");
+var Javascript = require("codemirror/mode/javascript/javascript");
 
-var _renderer = Remark().use(RemarkParse).use(RemarkHighlightJs).use(RemarkReact);
+var remark = Remark();
+
+var RemarkEngine = /* module */[/* remark */remark];
+
+var RemarkPlugin = /* module */[];
+
+var RemarkParsePlugin = /* module */[];
+
+var opts = {
+  sanitize: HastUtilsSanitize$ReactTemplate.sanitizeGhSchema,
+  remarkReactComponents: {
+    code: RemarkReactCodemirror(Codemirror, {
+          theme: "monokai"
+        })
+  }
+};
+
+var RemarkCodeMirrorOptions = /* module */[/* opts */opts];
+
+var RemarkReactPlugin = /* module */[];
+
+var _renderer = remark.use(RemarkParse).use(RemarkReact, opts);
 
 function render(markdown) {
   return _renderer.processSync(markdown).contents;
 }
 
+exports.RemarkEngine = RemarkEngine;
+exports.RemarkPlugin = RemarkPlugin;
+exports.RemarkParsePlugin = RemarkParsePlugin;
+exports.RemarkCodeMirrorOptions = RemarkCodeMirrorOptions;
+exports.RemarkReactPlugin = RemarkReactPlugin;
 exports._renderer = _renderer;
 exports.render = render;
-/* _renderer Not a pure module */
+/* remark Not a pure module */

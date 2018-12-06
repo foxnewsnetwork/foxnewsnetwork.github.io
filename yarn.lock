@@ -3221,7 +3221,7 @@ hast-util-is-element@^1.0.0:
   resolved "https://registry.yarnpkg.com/hast-util-is-element/-/hast-util-is-element-1.0.2.tgz#c23c9428b6a5a4e323bf9e16f87417476314981b"
   integrity sha512-4MEtyofNi3ZunPFrp9NpTQdNPN24xvLX3M+Lr/RGgPX6TLi+wR4/DqeoyQ7lwWcfUp4aevdt4RR0r7ZQPFbHxw==
 
-hast-util-sanitize@^1.0.0:
+hast-util-sanitize@^1.0.0, hast-util-sanitize@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/hast-util-sanitize/-/hast-util-sanitize-1.2.1.tgz#cdf60f734a3de6a6462902bf391f2dc9d38c7820"
   integrity sha512-bRyZ316tTETfxkpM0De0Fk5slEtR5hvkzDGbHpEAjZRmfQyT3xMTzMk0/gGWlkqsfafFCaPNbrtPdZBPMK8X8A==
@@ -5974,6 +5974,11 @@ randomfill@^1.0.3:
   dependencies:
     randombytes "^2.0.5"
     safe-buffer "^5.1.0"
+
+rationale@^0.1.9:
+  version "0.1.9"
+  resolved "https://registry.yarnpkg.com/rationale/-/rationale-0.1.9.tgz#d7f5b6986387bd444b25ae7dfd645c2d197938d5"
+  integrity sha512-tKnLk0dqOpyjWpjB0WX5e98PL+F8rTA1PGdiDchn+n7tCDPaa48Fw6HezCMvpG4ZRkUcL0EzpF2hdu1WfCsqTQ==
 
 raw-loader@^0.5.1:
   version "0.5.1"
