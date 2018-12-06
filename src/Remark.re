@@ -58,7 +58,7 @@ module RemarkCodeMirrorOptions = {
   type highlighter;
 
   [@bs.module]
-  external plugin : t => lightopts => highlighter = "remark-react-codemirror";
+  external plugin : (t, lightopts) => highlighter = "remark-react-codemirror";
 
   [@bs.module]
   external _style : unit = "codemirror/theme/monokai.css";
@@ -71,12 +71,13 @@ module RemarkCodeMirrorOptions = {
 
   [@bs.deriving abstract]
   type pluginOpts = {
-    sanitize: HastUtilsSanitize.schema,
+    sanitize: option(HastUtilsSanitize.schema),
     [@bs.as "remarkReactComponents"]
     remarkReactComponents_: remarkReactComponents,
   };
   let opts = pluginOpts(
-    ~sanitize=HastUtilsSanitize.sanitizeGhSchema,
+    /* ~sanitize=HastUtilsSanitize.sanitizeGhSchema, */
+    ~sanitize=None,
     ~remarkReactComponents_=remarkReactComponents(
       ~code=plugin(codemirror, lightopts(
           ~theme="monokai"
@@ -98,3 +99,5 @@ let _renderer = RemarkEngine.remark
 let render: string => ReasonReact.reactElement = (markdown) => _renderer
   -> RemarkEngine.processSync(markdown)
   -> RemarkEngine.contentsGet
+
+Js.log2("--\n\n schema: ", RemarkCodeMirrorOptions.opts)

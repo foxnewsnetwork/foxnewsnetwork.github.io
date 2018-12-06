@@ -18,7 +18,11 @@ external _sanitizeGhSchema : schema = "hast-util-sanitize/lib/github.json";
 
 [@bs.val]
 [@bs.scope "Object"]
-external assign : 'a => Js.t('b) => 'a = "assign";
+external assign : (
+  [@bs.as {json|{ }|json}] _,
+  'a,
+  Js.t('b)
+) => 'a = "assign";
 
 let attributeLens = Rationale.Lens.make(
   attributes_Get,
@@ -37,5 +41,3 @@ let sanitizeGhSchema = Rationale.Lens.(
     _sanitizeGhSchema
   )
 );
-
-let _ = Js.log2("github schema", _sanitizeGhSchema);

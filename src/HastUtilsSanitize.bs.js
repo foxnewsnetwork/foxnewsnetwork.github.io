@@ -7,7 +7,7 @@ var GithubJson = require("hast-util-sanitize/lib/github.json");
 var attributeLens = Lens$Rationale.make((function (prim) {
         return prim.attributes;
       }), (function (attributes, sch) {
-        return Object.assign(sch, {
+        return Object.assign(({ }), sch, {
                     attributes: attributes
                   });
       }));
@@ -15,7 +15,7 @@ var attributeLens = Lens$Rationale.make((function (prim) {
 var codeLens = Lens$Rationale.make((function (prim) {
         return prim.code;
       }), (function (code, attr) {
-        return Object.assign(attr, {
+        return Object.assign(({ }), attr, {
                     code: code
                   });
       }));
@@ -23,8 +23,6 @@ var codeLens = Lens$Rationale.make((function (prim) {
 var sanitizeGhSchema = Lens$Rationale.over(Lens$Rationale.$great$great$neg(attributeLens, codeLens), (function () {
         return /* array */["className"];
       }), GithubJson);
-
-console.log("github schema", GithubJson);
 
 exports.attributeLens = attributeLens;
 exports.codeLens = codeLens;
