@@ -19,9 +19,31 @@ external processSync : t => string => syncResult = "processSync";
 [@bs.module]
 external parsePlugin : plugin = "remark-parse";
 
-[@bs.module]
-external highlightPlugin : plugin = "remark-highlight.js";
+module RemarkCodeMirror = {
+  [@bs.module]
+  external _meta : unit = "codemirror/mode/meta";
+  let _ = _meta;
+  [@bs.module]
+  external _runmode : unit = "codemirror/addon/runmode/runmode";
+  let _ = _runmode;
+  [@bs.module]
+  external _javascript : unit = "codemirror/mode/javascript/javascript";
+  let _ = _javascript;
 
+  type t;
+
+  [@bs.module]
+  external engine : t = "codemirror";
+
+  [@bs.module]
+  external plugin : plugin = "remark-react-codemirror";
+};
+
+[@bs.module]
+external highlightStyle : unit = "codemirror/theme/monokai.css";
+let _ = highlightStyle;
+
+/* the html plugin seems to conflict with the react-plugin */
 /* [@bs.module]
 external htmlPlugin : plugin = "remark-html"; */
 

@@ -20,10 +20,15 @@
     "reason-react": ">=0.4.0"
   },
   "devDependencies": {
+    "autoprefixer": "^9.4.2",
     "bs-platform": "4.0.5",
+    "codemirror": "^5.42.0",
+    "css-loader": "^1.0.1",
     "favicons-webpack-plugin": "^0.0.9",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
+    "postcss-loader": "^3.0.0",
+    "precss": "^4.0.0",
     "raw-loader": "^0.5.1",
     "remark": "^10.0.1",
     "remark-highlight.js": "^5.0.0",
@@ -34,7 +39,9 @@
     "remark-metadata": "^0.2.1",
     "remark-preset-lint-markdown-style-guide": "^2.1.2",
     "remark-react": "^5.0.0",
+    "remark-react-codemirror": "^1.0.5",
     "remark-slug": "^5.1.1",
+    "style-loader": "^0.23.1",
     "webpack": "4.19.1",
     "webpack-cli": "^2.0.10"
   }
