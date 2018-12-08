@@ -3,7 +3,6 @@
 
 var React = require("react");
 var ReasonReact = require("reason-react/src/ReasonReact.js");
-var Utils$ReactTemplate = require("./Utils.bs.js");
 var Remark$ReactTemplate = require("./Remark.bs.js");
 
 var component = ReasonReact.statelessComponent("Markdown");
@@ -22,7 +21,7 @@ function make(content, _) {
           /* render */(function () {
               return React.createElement("div", {
                           className: "markdown"
-                        }, Utils$ReactTemplate.thruLog("Remark contents: ", Remark$ReactTemplate.render(content)));
+                        }, Remark$ReactTemplate.render(content));
             }),
           /* initialState */component[/* initialState */10],
           /* retainedProps */component[/* retainedProps */11],
